@@ -3,8 +3,6 @@
 
 <head>
   <title>Book a Slot|Caring For Life</title>
-  <meta name="description" content="free website template" />
-  <meta name="keywords" content="enter your keywords here" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -15,12 +13,135 @@
         $('#slider').nivoSlider();
     });
   </script> 
+  <script type="text/javascript">
+        $(function () {
+            var settings = {
+                rows: 5,
+                cols: 15,
+                rowCssPrefix: 'row-',
+                colCssPrefix: 'col-',
+                seatWidth: 35,
+                seatHeight: 35,
+                seatCss: 'seat',
+                selectedSeatCss: 'selectedSeat',
+				selectingSeatCss: 'selectingSeat'
+            };
+
+            var init = function (reservedSeat) {
+                var str = [], seatNo, className;
+                for (i = 0; i < settings.rows; i++) {
+                    for (j = 0; j < settings.cols; j++) {
+                        seatNo = (i + j * settings.rows + 1);
+                        className = settings.seatCss + ' ' + settings.rowCssPrefix + i.toString() + ' ' + settings.colCssPrefix + j.toString();
+                        if ($.isArray(reservedSeat) && $.inArray(seatNo, reservedSeat) != -1) {
+                            className += ' ' + settings.selectedSeatCss;
+                        }
+                        str.push('<li class="' + className + '"' +
+                                  'style="top:' + (i * settings.seatHeight).toString() + 'px;left:' + (j * settings.seatWidth).toString() + 'px">' +
+                                  '<a title="' + seatNo + '">' + seatNo + '</a>' +
+                                  '</li>');
+                    }
+                }
+                $('#place').html(str.join(''));
+            };
+
+            var bookedSeats = [5, 10, 25];
+            init(bookedSeats);
+
+
+            $('.' + settings.seatCss).click(function () {
+			if ($(this).hasClass(settings.selectedSeatCss)){
+				alert('This slot is already reserved');
+			}
+			else{
+                $(this).toggleClass(settings.selectingSeatCss);
+				}
+            });
+
+            $('#btnShow').click(function () {
+                var str = [];
+                $.each($('#place li.' + settings.selectedSeatCss + ' a, #place li.'+ settings.selectingSeatCss + ' a'), function (index, value) {
+                    str.push($(this).attr('title'));
+                });
+                alert(str.join(','));
+            })
+
+            $('#btnShowNew').click(function () {
+                var str = [], item;
+                $.each($('#place li.' + settings.selectingSeatCss + ' a'), function (index, value) {
+                    item = $(this).attr('title');                   
+                    str.push(item);                   
+                });
+                alert(str.join(','));
+            })
+        });
+    
+    </script>
+<style type="text/css">
+	#holder{	
+	 height:200px;	 
+	 width:550px;
+	 background-color:#F5F5F5;
+	 border:1px solid #A4A4A4;
+	 margin-left:10px;	
+	}
+	 #place {
+	 position:relative;
+	 margin:7px;
+	 }
+     #place a{
+	 font-size:0em;
+	 }
+     #place li
+     {
+         list-style: none outside none;
+         position: absolute;   
+     }    
+     #place li:hover
+     {
+        background-color:yellow;      
+     } 
+	 #place .seat{
+	 background:url("images/right.png") no-repeat scroll 0 0 transparent;
+	 height:33px;
+	 width:33px;
+	 display:block;	 
+	 }
+      #place .selectedSeat
+      { 
+		background-image:url("images/wrong.jpg");      	 
+      }
+	   #place .selectingSeat
+      { 
+		background-image:url("images/circle.jpg");      	 
+      }
+	  #place .row-3, #place .row-4{
+		margin-top:10px;
+	  }
+	 #seatDescription{
+	 padding:0px;
+	 }
+	  #seatDescription li{
+	  verticle-align:middle;	  
+	  list-style: none outside none;
+	   padding-left:35px;
+	  height:35px;
+	  float:left;
+	  }
+    </style>
+	
 </head>
 
 <body>
   <div id="main">
 
   	<div id="menubar">
+	<div id="main">
+	<div class="content">
+	      	<div id="logo_holder">	
+			 	<a href="http://iiit.ac.in/" id="logo">International Institute of Information Technology</a>
+	      	</div>
+	</div>
 	  <div id="welcome">
 	    <h1><a href="#">Aarogya Medical Center</a></h1>
 	  </div><!--close welcome-->
@@ -33,8 +154,11 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div><!--close menu-->
-    </div><!--close menubar-->	
-    
+	  </div>
+    </div><!--close menubar-->
+    <h1>&nbsp;</h1>
+	<h1>&nbsp;</h1>
+	<h1>&nbsp;</h1>
 	<div id="site_content">	
 
 	  <div class="sidebar_container">       
@@ -66,7 +190,7 @@
         <div class="sidebar">
           <div class="sidebar_item">
             <h2>Contact</h2>
-            <p>Phone: +44 (0)1234 567891</p>
+            <p>Phone: +91 (0)1234 567891</p>
             <p>Email: <a href="mailto:info@youremail.co.in">info@youremail.co.in</a></p>
           </div><!--close sidebar_item--> 
         </div><!--close sidebar-->
@@ -79,63 +203,82 @@
             <img src="images/home_2.jpg" alt="" />
 			<img src="images/home_3.jpg" alt="" />
 			<img src="images/home_4.jpg" alt="" />
+			<img src="images/home_5.jpg" alt="" />
+			<img src="images/home_6.jpg" alt="" />
+			<img src="images/home_7.jpg" alt="" />
 		  </div><!--close slider-->
 		</div><!--close slider_wrapper-->
 	  </div><!--close banner_image-->	    
 	   
       <div id="content">
         <div class="content_item">
-          <h2>Book a Slot</h2>
-			<div class="content_container">
-			  <h3>Mr Joe Bloggs</h3>
-			  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.&rdquo;</p>
-			</div><!--close content_container-->
-            <div class="content_container">
-			  <h3>Mr Joe Bloggs</h3>
-			  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.&rdquo;</p>
-			</div><!--close content_container--> 
-			<div class="content_container">
-			  <h3>Mr Joe Bloggs</h3>
-			  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.&rdquo;</p>
-			</div><!--close content_container-->
-            <div class="content_container">
-			  <h3>Mr Joe Bloggs</h3>
-			  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.&rdquo;</p>
-			</div><!--close content_container--> 
-	    </div><!--close content_item-->
-	  </div><!--content-->   
-	  
+		  <div class="form_settings">
+            <h2>Book A Slot</h2>
+            <p>Using the following form, you can book time slot with an available doctor.</p>
+			<p>&nbsp;</p>
+			<p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
+			<p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
+			<p><span>Type of Doctor</span></p>
+			<select name="physician">
+				<option value="1">Dr. Amarnath(Allopathy)</option>
+				<option value="2">Dr. (Mrs.)Shyamala Kumar G(Allopathy)</option>
+				<option value="3">Dr. (Mrs.)Vinaya(Ayurvedic)</option>
+				<option value="4">Dr. (Mrs.)Subhashini(Homeopathy)</option>
+				<option value="5">Ms. Kinammayi(Student Counsellor)</option>
+			</select>
+			<p><span>Problem</span><textarea class="contact textarea" rows="8" cols="50" name="your_message"></textarea></p>
+			<div id="holder"> 
+        <ul  id="place">
+        </ul>    
+    </div>
+    <div style="float:left;"> 
+    <ul id="seatDescription">
+        <li style="background:url('images/right.png') no-repeat scroll 0 0 transparent;">Available Slot</li>
+        <li style="background:url('images/wrong.jpg') no-repeat scroll 0 0 transparent;">Booked Slot</li>
+        <li style="background:url('images/circle.jpg') no-repeat scroll 0 0 transparent;">Selected Slot</li>
+    </ul>
+    </div>
+        <div style="clear:both;width:100%">
+        <input type="button" id="btnShowNew" value="Show Selected Slot" />
+        <input type="button" id="btnShow" value="Show All" />           
+        </div>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Send" /></p>
+          </div><!--close form_settings-->
+		</div><!--close content_item-->
+      </div><!--close content-->   
+	  <h2> Choose slots by clicking the corresponding slot in the layout below:</h2>
+    
 	  <div id="content_blue">
 	    <div class="content_blue_container_box">
 		  <h4>Latest Blog Post</h4>
-	      <p> eg: Today Dr.X will not be available on Y timing.Bookings for today of Dr.X for Y timings stand cancelled.</p>
+	      <p> eg: Today Dr.X will not be available on Y timing, etc.</p>
 		  <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section1">Read more</a>
 		  </div><!--close readmore-->
 	    </div><!--close content_blue_container_box-->
         <div class="content_blue_container_box">
          <h4>Vision, Mission, Value</h4>
-	      <p>Health and Care Redefined.</p>
+	      <p>"Health and Care Redefined", that is what Aarogya aims for.</p>
 	      <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section2">Read more</a>
 		  </div><!--close readmore-->
 	    </div><!--close content_blue_container_box-->
         <div class="content_blue_container_boxl">
 		  <h4>Foundation</h4>
-	      <p> Phasellus laoreet feugiat risus. Ut tincidunt, ante vel fermentum iaculis.</p>
+	      <p> Learn more about Aarogya, the medical center of IIIT, Hyderabad.</p>
 	      <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section3">Read more</a>
 		  </div><!--close readmore-->	  
 	    </div><!--close content_blue_container_box1-->      
 	    <br style="clear:both"/>
       </div><!--close content_blue--> 	
 	</div><!--close site_content--> 
+	
+	</div>
+	<div id="footer">
+	  <a>Site Created by Amateurz</a> | <a>UG1</a>
+	  </div><!--close footer-->  	
  
-  </div><!--close main-->
-  
-  <div id="footer">
-	  <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://fotogrph.com/">Images</a> | Heart Internet  <a href="http://www.heartinternet.co.uk/web-hosting/">Website Hosting</a> | website template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
-  </div><!--close footer-->  	
   
 </body>
 </html>

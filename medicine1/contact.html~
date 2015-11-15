@@ -3,8 +3,6 @@
 
 <head>
   <title>Contact Us|Caring for Life</title>
-  <meta name="description" content="free website template" />
-  <meta name="keywords" content="enter your keywords here" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -18,9 +16,15 @@
 </head>
 
 <body>
-  <div id="main">
-	
+  
 	<div id="menubar">
+	<div id="main">
+	<div class="content">
+	      	<div id="logo_holder">	
+			 	<a href="http://iiit.ac.in/" id="logo">International Institute of Information Technology</a>
+	      	</div>
+	</div>
+	<h3>&nbsp;</h3>
 	  <div id="welcome">
 	    <h1><a href="#">Aarogya Medical Center</a></h1>
 	  </div><!--close welcome-->
@@ -33,6 +37,7 @@
           <li class="current"><a href="contact.html">Contact Us</a></li>
         </ul>
       </div><!--close menu-->
+	  </div>
     </div><!--close menubar-->	
 	
 	<div id="site_content">	
@@ -66,68 +71,101 @@
         <div class="sidebar">
           <div class="sidebar_item">
             <h2>Contact</h2>
-            <p>Phone: +44 (0)1234 567891</p>
+            <p>Phone: +91 (0)1234 567891</p>
             <p>Email: <a href="mailto:info@youremail.co.in">info@youremail.co.in</a></p>
           </div><!--close sidebar_item--> 
         </div><!--close sidebar-->
       </div><!--close sidebar_container-->	
-	
 	  <div id="banner_image">
 	    <div id="slider-wrapper">        
           <div id="slider" class="nivoSlider">
             <img src="images/home_1.jpg" alt="" />
             <img src="images/home_2.jpg" alt="" />
+			<img src="images/home_3.jpg" alt="" />
+			<img src="images/home_4.jpg" alt="" />
+			<img src="images/home_5.jpg" alt="" />
+			<img src="images/home_6.jpg" alt="" />
+			<img src="images/home_7.jpg" alt="" />
 		  </div><!--close slider-->
 		</div><!--close slider_wrapper-->
-	  </div><!--close banner_image-->		   
-	   
-      <div id="content">
-        <div class="content_item">
-		  <div class="form_settings">
-            <h2>Contact Us</h2>
-            <p>A contact form requires some method of emailing the contents of the form to an email address. The most common way to do this is to use some kind of server script (PHP for example). I would be happy to send you the PHP code for the contact form for your chosen template, I charge £20.00GBP for this. Simply <a href="http://www.araynordesign.co.uk/contact.php">contact me</a> for more details.</p>
-			<p>&nbsp;</p>
-			<p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
-			<p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
-			<p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_message"></textarea></p>
-            <p style="padding: 10px 0 10px 0;">Please enter the answer to this simple maths question (to prevent spam)</p>
-			<p><span>Maths Question: 9 + 3 = ?</span><input type="text" name="user_answer" class="contact" /><input type="hidden" name="answer" value="4d76fe9775" /></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Send" /></p>
-          </div><!--close form_settings-->
-		</div><!--close content_item-->
-      </div><!--close content-->   
+	  </div><!--close banner_image-->	
+
+	  <h2>&nbsp;</h2>
+	  <h2>Contact Us</h2>	  
+    <table class="table table-hover" width="70%">
+    <thead>
+      <tr>
+        <th>Doctor Name</th>
+        <th>Contact No.</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dr. Amarnath</td>
+        <td>9885777000</td>
+        <td>name@example.com</td>
+      </tr>
+      <tr>
+        <td>Dr. (Mrs.)Shyamala Kumar G</td>
+        <td>8885575576</td>
+        <td>name@example.com</td>
+      </tr>
+      <tr>
+        <td>Dr. (Mrs.)Vinaya</td>
+        <td>9949966081</td>
+        <td>name@example.com</td>
+      </tr>
+	  <tr>
+        <td>Dr. (Mrs.)Subhashini</td>
+        <td>9652637638</td>
+        <td>name@example.com</td>
+      </tr>
+	  <tr>
+        <td>Ms. Kinammayi</td>
+        <td>9440389231</td>
+        <td>name@example.com</td>
+      </tr>
+	  <tr>
+        <td>Ms. Sophia P. Matthew</td>
+        <td>7032435621</td>
+        <td>name@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>&nbsp;</h2>
 
 	  <div id="content_blue">
 	    <div class="content_blue_container_box">
 		  <h4>Latest Blog Post</h4>
-	      <p> eg: Today Dr.X will not be available on Y timing.Bookings for today of Dr.X for Y timings stand cancelled.</p>
+	      <p> eg: Today Dr.X will not be available on Y timing, etc.</p>
 		  <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section1">Read more</a>
 		  </div><!--close readmore-->
 	    </div><!--close content_blue_container_box-->
         <div class="content_blue_container_box">
          <h4>Vision, Mission, Value</h4>
-	      <p> Phasellus laoreet feugiat risus. Ut tincidunt, ante vel fermentum iaculis.</p>
+	      <p>"Health and Care Redefined", that is what Aarogya aims for.</p>
 	      <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section2">Read more</a>
 		  </div><!--close readmore-->
 	    </div><!--close content_blue_container_box-->
         <div class="content_blue_container_boxl">
 		  <h4>Foundation</h4>
-	      <p> Phasellus laoreet feugiat risus. Ut tincidunt, ante vel fermentum iaculis.</p>
+	      <p> Learn more about Aarogya, the medical center of IIIT, Hyderabad.</p>
 	      <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section3">Read more</a>
 		  </div><!--close readmore-->	  
 	    </div><!--close content_blue_container_box1-->      
 	    <br style="clear:both"/>
       </div><!--close content_blue--> 	
 	</div><!--close site_content--> 
+	
+	</div>
+	<div id="footer">
+	  <a>Site Created by Amateurz</a> | <a>UG1</a>
+	  </div><!--close footer-->  	
  
-  </div><!--close main-->
-  
-  <div id="footer">
-	  <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://fotogrph.com/">Images</a> | Heart Internet  <a href="http://www.heartinternet.co.uk/web-hosting/">Website Hosting</a> | website template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
-  </div><!--close footer-->  	
   
 </body>
 </html>

@@ -2,9 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-  <title>Caring for Life</title>
-  <meta name="description" content="free website template" />
-  <meta name="keywords" content="enter your keywords here" />
+  <title>Home|Caring for Life</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -18,9 +16,14 @@
 </head>
 
 <body>
-  <div id="main">
-
+  
 	<div id="menubar">
+	<div id="main">
+	<div class="content">
+	      	<div id="logo_holder">	
+			 	<a href="http://iiit.ac.in/" id="logo">International Institute of Information Technology</a>
+	      	</div>
+	</div>
 	  <div id="welcome">
 	    <h1><a href="#">Aarogya Medical Center</a></h1>
 	  </div><!--close welcome-->
@@ -33,9 +36,12 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div><!--close menu-->
+	  </div>
     </div><!--close menubar-->	
-    
-	<div id="site_content">		
+	<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+	<div id="site_content">	
 
 	  <div class="sidebar_container">       
 		<div class="sidebar">
@@ -46,7 +52,7 @@
         </div><!--close sidebar-->     		
 		<div class="sidebar">
           <div class="sidebar_item">
-            <h2>Latest Updates</h2>
+            <h2>Latest Update</h2>
             <h3>November 2015</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
 		  </div><!--close sidebar_item--> 
@@ -66,12 +72,11 @@
         <div class="sidebar">
           <div class="sidebar_item">
             <h2>Contact</h2>
-            <p>Phone: +44 (0)1234 567891</p>
-            <p>Email: <a href="mailto:info@youremail.co.uk">info@youremail.co.in</a></p>
+            <p>Phone: +91 (0)1234 567891</p>
+            <p>Email: <a href="mailto:info@youremail.co.in">info@youremail.co.in</a></p>
           </div><!--close sidebar_item--> 
         </div><!--close sidebar-->
       </div><!--close sidebar_container-->	
-
 	  <div id="banner_image">
 	    <div id="slider-wrapper">        
           <div id="slider" class="nivoSlider">
@@ -79,16 +84,19 @@
             <img src="images/home_2.jpg" alt="" />
 			<img src="images/home_3.jpg" alt="" />
 			<img src="images/home_4.jpg" alt="" />
+			<img src="images/home_5.jpg" alt="" />
+			<img src="images/home_6.jpg" alt="" />
+			<img src="images/home_7.jpg" alt="" />
 		  </div><!--close slider-->
 		</div><!--close slider_wrapper-->
-	  </div><!--close banner_image-->		  
+	  </div><!--close banner_image-->
 	 
 	  <div id="content">
         <div class="content_item">
 		  <h1>Aarogya- Caring for Life</h1> 
 	      <p>The Aarogya Medical centre aims to provide and improve medical service throughout IIIT community.It cares for the sick, promoting good health and alleviating pain and suffering.</p>	  
 		  <div class="content_container">
-		    <p>To see through the schedule of Aarogya , click on the Schedule. For queries, post on our forum in 'Contact us'.</p>
+		    <p>To see through the schedule of Aarogya , click on the Schedule. Book an appointment with the doctor according to the timings given in the schedule.</p>
 		  	<div class="button_small">
 		      <a href="ourwork.html">Schedule</a>
 		    </div><!--close button_small-->
@@ -105,31 +113,34 @@
 	  <div id="content_blue">
 	    <div class="content_blue_container_box">
 		  <h4>Latest Blog Post</h4>
-	      <p> eg: Today Dr.X will not be available on Y timing.Bookings for today of Dr.X for Y timings stand cancelled.</p>
+	      <p> eg: Today Dr.X will not be available on Y timing, etc.</p>
 		  <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section1">Read more</a>
 		  </div><!--close readmore-->
 	    </div><!--close content_blue_container_box-->
         <div class="content_blue_container_box">
-         <h4>Vision,Mission,Value</h4>
-	      <p> Health and Care Redefined.</p>
+         <h4>Vision, Mission, Value</h4>
+	      <p>"Health and Care Redefined", that is what Aarogya aims for.</p>
 	      <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section2">Read more</a>
 		  </div><!--close readmore-->
 	    </div><!--close content_blue_container_box-->
         <div class="content_blue_container_boxl">
 		  <h4>Foundation</h4>
-	      <p> Phasellus laoreet feugiat risus. Ut tincidunt, ante vel fermentum iaculis.</p>
+	      <p> Learn more about Aarogya, the medical center of IIIT, Hyderabad.</p>
 	      <div class="readmore">
-		    <a href="#">Read more</a>
+		    <a href="extra.html#section3">Read more</a>
 		  </div><!--close readmore-->	  
 	    </div><!--close content_blue_container_box1-->      
 	    <br style="clear:both"/>
       </div><!--close content_blue--> 	
 	</div><!--close site_content--> 
-  
-  </div><!--close main-->
-  
+	
+	</div>
+	<div id="footer">
+	  <a>Site Created by Amateurz</a> | <a>UG1</a>
+	  </div><!--close footer-->  	
+ 
   
 </body>
 </html>
